@@ -1,0 +1,147 @@
+@font-face {
+    font-family: Roboto;
+    src: url(static/Roboto/Roboto-Regular.ttf);
+}
+
+* {
+    font-family: Roboto;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template:
+        "sidebar header" auto
+        "sidebar content" 3fr
+        / 220px 1fr;
+}
+
+/* Sidebar Styling */
+
+.sidebar {
+    background-color: #1192d4;
+    color: white;
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.sidebar h1,
+.sidebar h3 {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.sidebar h1 {
+    font-size: 1.25rem;
+}
+
+.sidebar h1 img {
+    width: 2rem;
+}
+
+/* Header Styling */
+
+.header {
+    background-color: rgb(255, 255, 255);
+    grid-area: header;
+}
+
+.search_div,
+.profile_hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: auto;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.profile_picture {
+    width: 48px;
+}
+
+.search_bar,
+.profile_section {
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search_bar {
+    flex-grow: 1;
+    grid-template-columns: auto 1fr;
+}
+
+.search_bar input {
+    max-width: 30rem;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 2rem;
+}
+
+.profile_section {
+    grid-template-columns: auto auto auto;
+}
+
+.profile_hero {
+    padding-bottom: 0.5rem;
+}
+
+.profile_hero_left {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.profile_hero_left h5,
+.profile_hero_left h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.profile_hero_left div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.hero_pfp {
+    width: 5rem;
+}
+
+.profile_hero_right {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile_hero_right button {
+    background-color: #1192d4;
+    color: white;
+    border: none;
+    padding: 0.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+}
+
+/* Main Content Styling */
+
+.main-content {
+    background-color: #e2e8f0;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.cards_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+}
